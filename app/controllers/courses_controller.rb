@@ -3,6 +3,7 @@ class CoursesController < ApplicationController
   @courses = Course.all 
  end
 
- def create
+ def show
+  @courses = Course.find(params[:id])
  end 
 end
