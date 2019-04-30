@@ -3,8 +3,7 @@ class LessonsController < ApplicationController
   before_action :require_authorized_for_current_lesson, only: [:show]
 
   def create
-    flash[:notice] = "You Must Be Enrolled"
-    redirect_to course_path(current_lesson)
+    
   end
 
   def show
@@ -16,7 +15,7 @@ class LessonsController < ApplicationController
 
 def require_authorized_for_current_lesson
    if current_lesson.user != current_user
-    flash :notice "You Must Be Enrolled"
+    flash[ :notice] = "You Must Be Enrolled"
    end 
  end 
 
