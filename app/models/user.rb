@@ -19,7 +19,7 @@ class User < ApplicationRecord
       enrolled_lessons << enrollment.lesson
     end 
 
-    return enrolled_lessons.include?(lesoson)
+    return enrolled_lessons.include?(lesson)
   end 
 
 end 
