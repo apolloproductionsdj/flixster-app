@@ -46,6 +46,11 @@
           <br/>
           <%= link_to lesson_path(lesson) do %>
           <b><%= lesson.title %></b>
+            <% if current_user && current_user.enrolled_in?(@lesson) %>
+        <h3 class="badge badge-info">You Are Enrolled!</h3>
+      <% else %>
+        <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-primary', method: :post %>
+      <% end %>
           <br />
           <%- lesson.subtitle %>
          <% end %>
