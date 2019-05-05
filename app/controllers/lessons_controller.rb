@@ -6,12 +6,8 @@ class LessonsController < ApplicationController
     
   end
 
-  def show
-    current_lesson.section.course(lesson: current_lesson)
-    redirect_to course_path(current_lesson) 
-  end
 
-  private
+  
 
 def require_authorized_for_current_lesson
     if !current_user.enrolled_in?(current_lesson.section.course)
