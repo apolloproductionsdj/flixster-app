@@ -70,6 +70,7 @@ gem "carrierwave-aws"
 gem 'stripe'
 gem 'ranked-model'
 gem 'jquery-ui-rails'
+gem 'font-awesome-sass', '~> 5.8.1'
 
 source 'https://rails-assets.org' do 
   gem 'rails-assets-tether', '>= 1.3.3'
