@@ -6,12 +6,10 @@
   <br />
   <div class="row">
    <div class="col-sm-4 col-12 text-center">
-    <span class="fa fa-ellipsis-v">
     <span class="badge badge-default">
      <%= number_to_currency @course.cost %>
     </span>
-    </span>
-
+    
    <% if current_user && current_user == @course.user %>
     <br />
     <br />
